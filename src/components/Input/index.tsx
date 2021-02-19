@@ -5,7 +5,7 @@ import React, {
   useState,
   useCallback,
 } from 'react';
-import { FiAlertCircle } from 'react-icons/fi';
+import { FaTimes } from 'react-icons/fa';
 import { useField } from '@unform/core';
 
 import { Container, Error } from './styles';
@@ -51,27 +51,27 @@ const Input: React.FC<InputProps> = ({
   }, [fieldName, registerField]);
 
   return (
-    <Container
-      style={containerStyle}
-      isErrored={!!error}
-      isFilled={isFilled}
-      isFocused={isFocused}
-      data-testid="input-container"
-    >
-      <input
-        onFocus={handleInputFocus}
-        onBlur={handleInputBlur}
-        defaultValue={defaultValue}
-        ref={inputRef}
-        {...rest}
-      />
+    <>
+      <Container
+        style={containerStyle}
+        isErrored={!!error}
+        isFilled={isFilled}
+        isFocused={isFocused}
+        data-testid="input-container"
+      >
+        <input
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+          defaultValue={defaultValue}
+          ref={inputRef}
+          {...rest}
+        />
 
-      {error && (
-        <Error title={error}>
-          <FiAlertCircle color="#c53030" size={20} />
-        </Error>
-      )}
-    </Container>
+        {error && <FaTimes color="#ff377f" size={18} />}
+      </Container>
+
+      {error && <Error>{error}</Error>}
+    </>
   );
 };
 
