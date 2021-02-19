@@ -1,0 +1,7 @@
+**/*.js
+/*.js
+node_modules
+build
+.next
+next-app-env.d.ts
+/src/pages/_document.tsx
