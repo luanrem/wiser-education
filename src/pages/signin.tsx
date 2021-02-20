@@ -46,7 +46,7 @@ const Signin: React.FC = () => {
           password: data.password,
         });
 
-        router.push('/');
+        router.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);

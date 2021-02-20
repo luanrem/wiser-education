@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       </Container>
       <Link href="/signin">
         <Button>
-          <p>Faça Login</p>
+          <p>Sair</p>
         </Button>
       </Link>
     </>
