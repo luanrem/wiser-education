@@ -1,34 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    Wiser Education Login Page
+</h1>
 
-## Getting Started
+<h1 align="center">
+    <img alt="WiserEducation" title="#wiserFirstImage" src=".github/wiser.jpg" width="200px" />
+</h1>
 
-First, run the development server:
+<h4 align="center">
+  It's login page that connect on external API and make the authentication to enter in the application. This is a project made in two days to show my front-end development skills.
+</h4>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/luanrem/wiser-education">
 
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/luanrem/wiser-education">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/luanrem/wiser-education">
+  <a href="https://github.com/luanrem/wiser-education/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luanrem/wiser-education">
+  </a>
+
+  <a href="https://github.com/luanrem/wiser-education">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/luanrem/wiser-education">
+  </a>
+</p>
+
+
+<p align="center">
+  <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+
+----
+## :vhs: App Preview
+
+<table boder="0" style="border: 0">
+  <tr  style="text-align: center; margin: 0 auto; border: 0">
+    <td style="text-align: center; border: 0">
+      <p style="font-size: 24px">Errors on login</p>
+      <img width="95%" height="auto" src=".github/gif1.gif">
+    </td>
+    <td style="text-align: center; border: 0">
+      <p style="font-size: 24px">Doing the login</p>
+      <img width="95%" height="auto" src=".github/gif2.gif">
+    </td>
+  </tr>
+<table>
+
+
+## :rocket: Technologies
+<div id="rocket-technologies"></div>
+This project was developed by myself using the following technologies:
+
+
+- [ReactJS](https://pt-br.reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com)
+- [axios](https://github.com/axios/axios)
+- [Redux](https://redux.js.org/)
+- [Polished](https://polished.js.org)
+- [Yup](https://github.com/jquense/yup)
+- [VS Code][vc]
+
+- And another bunch of packages....
+
+## :information_source: How To Use
+<div id="information_source-how-to-use"></div>
+To clone and run this application, you'll need [Git](https://git-scm.com), [NPM][npm] + [Yarn v1.13][yarn] or higher installed on your computer.
+
+1 - Download and install
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone this repository
+$ git clone https://github.com/luanrem/adminsystem.git
+
+# Go into the repository
+$ cd wiser-education
+
+# Install dependencies for the app
+$ yarn install
+
+# Run the server
+$ yarn dev
+
+# Open the browser on http://localhost:3000/signin
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2 - Search an authenticated user with API
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Go to https://603040f3a1e9d20017af19ca.mockapi.io/api/users
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Try to login with one of those users you get.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+[npm]: https://www.npmjs.com
