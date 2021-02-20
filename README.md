@@ -40,10 +40,6 @@
       <p style="font-size: 24px">Errors on login</p>
       <img width="95%" height="auto" src=".github/gif1.gif">
     </td>
-    <td style="text-align: center; border: 0">
-      <p style="font-size: 24px">Doing the login</p>
-      <img width="95%" height="auto" src=".github/gif2.gif">
-    </td>
   </tr>
 <table>
 
@@ -92,6 +88,8 @@ $ yarn dev
 - Go to https://603040f3a1e9d20017af19ca.mockapi.io/api/users
 
 - Try to login with one of those users you get.
+
+<img width="95%" height="auto" src=".github/users.jpg">
 
 
 [nodejs]: https://nodejs.org/
