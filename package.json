@@ -10,6 +10,7 @@
   "dependencies": {
     "@unform/core": "^2.1.5",
     "@unform/web": "^2.1.5",
+    "axios": "^0.21.1",
     "next": "10.0.7",
     "next-images": "^1.7.0",
     "polished": "^4.1.1",

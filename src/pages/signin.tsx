@@ -1,4 +1,5 @@
 import { useCallback, useRef } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
@@ -11,6 +12,7 @@ import Input from '../components/Input';
 import Button from '../components/Button';
 
 import getValidationErrors from '../utils/getValidationErrors';
+import { useAuth } from '../hooks/auth';
 
 interface SignUpFormData {
   email: string;
@@ -18,30 +20,43 @@ interface SignUpFormData {
 }
 
 const Signin: React.FC = () => {
+  const router = useRouter();
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: SignUpFormData) => {
-    try {
-      formRef.current?.setErrors({});
+  const { signIn } = useAuth();
 
-      const schema = Yup.object().shape({
-        email: Yup.string()
-          .required('E-mail obrigatorio')
-          .email('Digite um e-mail valido'),
-        password: Yup.string().required('Senha Obrigatoria'),
-      });
+  const handleSubmit = useCallback(
+    async (data: SignUpFormData) => {
+      try {
+        formRef.current?.setErrors({});
 
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errors = getValidationErrors(err);
+        const schema = Yup.object().shape({
+          email: Yup.string()
+            .required('E-mail obrigatorio')
+            .email('Digite um e-mail valido'),
+          password: Yup.string().required('Senha Obrigatoria'),
+        });
 
-        formRef.current?.setErrors(errors);
+        await schema.validate(data, {
+          abortEarly: false,
+        });
+
+        await signIn({
+          email: data.email,
+          password: data.password,
+        });
+
+        router.push('/');
+      } catch (err) {
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
+
+          formRef.current?.setErrors(errors);
+        }
       }
-    }
-  }, []);
+    },
+    [router, signIn],
+  );
 
   return (
     <Container>

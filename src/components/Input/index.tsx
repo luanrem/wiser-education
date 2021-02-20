@@ -33,12 +33,6 @@ const Input: React.FC<InputProps> = ({
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
 
-    // if (inputRef.current?.value) {
-    //   setIsFilled(true);
-    // } else {
-    //   setIsFilled(false);
-    // }
-    // Os dois modos de escrever sao iguais
     setIsFilled(!!inputRef.current?.value);
   }, []);
 
