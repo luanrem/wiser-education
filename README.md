@@ -92,6 +92,12 @@ $ yarn dev
 <img width="95%" height="auto" src=".github/users.jpg">
 
 
+3 - To test application just run the following command
+```bash
+# Clone this repository
+$ yarn test
+```
+
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
 [vc]: https://code.visualstudio.com/
